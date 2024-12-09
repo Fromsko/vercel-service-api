@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "rye-dev": "rye run demo",
     "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
     "next-dev": "next dev",
     "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
+    "local": "concurrently \"npm run next-dev\" \"npm run rye-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
