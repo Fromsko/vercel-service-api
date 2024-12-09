@@ -1,8 +1,15 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 
-### Create FastAPI instance with custom docs and openapi url
-app = FastAPI(docs_url="/api/py/docs", openapi_url="/api/py/openapi.json")
+from api.handler.auth import router as user_router
+from api.handler.guard import router as guard_router
 
-@app.get("/api/py/helloFastApi")
-def hello_fast_api():
-    return {"message": "Hello from FastAPI"}
+
+app = FastAPI(
+    docs_url="/api/py/docs",
+    openapi_url="/api/py/openapi.json"
+)
+
+
+app.include_router(guard_router, prefix="/api/py", tags=["Guard"])
+app.include_router(user_router, prefix="/api/py/user", tags=["User"])
