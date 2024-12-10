@@ -13,10 +13,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
     "@types/node": "22.5.5",
     "@types/react": "18.3.8",
     "@types/react-dom": "18.3.0",
     "concurrently": "^9.0.1",
+    "axios": "^1.6.2",
     "next": "^14.2.13",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -28,6 +30,7 @@
     "postcss": "^8.4.47",
     "daisyui": "^4.12.14",
     "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4"
+    "eslint-config-next": "13.4.4",
+    "antd": "5.22.4"
   }
 }
