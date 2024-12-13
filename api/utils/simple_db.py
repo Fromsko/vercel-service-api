@@ -10,7 +10,6 @@ def save_user(user_id: int, username: str, email: str, role: str, password: str)
     user_data = {
         'id': user_id,
         'username': username,
-        'email': email,
         'role': role,
         'password': password
     }
