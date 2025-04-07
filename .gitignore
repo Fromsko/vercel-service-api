@@ -39,3 +39,4 @@ __pycache__/
 venv
 .gitpod.yml
 bun.lockb
+package-lock.json
