@@ -2,7 +2,7 @@
 import { Card } from 'antd';
 import LoginForm from '../components/LoginForm';
 
-export default function Page({ children }: { children: React.ReactNode }) {
+export default function Page() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 select-none">
       <div className="flex w-full max-w-7xl items-center justify-center">
